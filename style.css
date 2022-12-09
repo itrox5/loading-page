@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis/css2?family=Ubuntu');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+ 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'swap', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,6 +27,13 @@ body {
 
 .loading-text {
   font-size: 150px;
-  color: #fff;
-  text-shadow: 4px 4px 2px rgba(0,0,0,0.38);
+  color: red;
+  text-shadow: 4px 4px 2px rgba(255,255,255,0.38);
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+  supported by Chrome, Edge, Opera and Firefox */
 }
