@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis/css2?family=Ubuntu');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.bg {
+  background: url('img/O1t26Hb-the-avenger-wallpaper-hd.jpg') no-repeat center/cover;
+  position: absolute;
+  top: -30;
+  left: -30;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  z-index: -1;
+  filter: blur(0);
+}
+
+.loading-text {
+  font-size: 150px;
+  color: #fff;
+  text-shadow: 4px 4px 2px rgba(0,0,0,0.38);
+}
