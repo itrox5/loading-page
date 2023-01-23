@@ -1,18 +1,27 @@
-const loadText = document.querySelector('.loading-text');
-const bg = document.querySelector('.bg');
-let int = setInterval(blurring, 30);
-let load = 0;
-
-function blurring() { 
-  load++;
-  if (load > 99) {
-   clearInterval(int);
+class Loader {
+  constructor() {
+    this.loadText = document.querySelector('.loading-text');
+    this.bg = document.querySelector('.background');
+    this.load = 0;
   }
-  loadText.innerText = `${load}%`;
-  loadText.style.opacity = scale(load, 0, 100, 1, 0);
-  bg.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`;
-}
 
-const scale = (num, in_min, in_max, out_min, out_max) => {
-  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+  start() {
+    setInterval(() => this.blurring(), 30);
+  }
+
+  blurring() { 
+    this.load++;
+    if (this.load > 99) {
+      clearInterval(this.int);
+    }
+    this.loadText.innerText = `${this.load}%`;
+    this.loadText.style.opacity = this.scale(this.load, 0, 100, 1, 0);
+    this.bg.style.filter = `blur(${this.scale(this.load, 0, 100, 30, 0)}px)`;
+  }
+
+  scale(num, in_min, in_max, out_min, out_max) {
+    return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+  }
 }
+const loader = new Loader();
+loader.start();
