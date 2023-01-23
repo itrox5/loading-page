@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: batman-font;
-  src: url('fonts/Bruce-Forever.ttf');
+  src: url('../fonts/Bruce-Forever.ttf');
 }
 
 * {
@@ -24,7 +24,7 @@ body {
 /**** BLOCK ****/
 
 .background {
-  background: url('img/Batman-wallpaper-HD-small.jpeg') no-repeat center/cover;
+  background: url('../img/Batman-wallpaper-HD-small.jpeg') no-repeat center/cover;
   position: absolute;
   top: -30;
   left: -30;
